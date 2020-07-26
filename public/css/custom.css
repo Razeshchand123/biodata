@@ -72,7 +72,9 @@ body{
     overflow: hidden;
     box-sizing: border-box;
    }
-   .bg-theme{ background: radial-gradient(#065c95, transparent); border: 1px solid rgb(5, 49, 107);}
+   .bg-theme{ background: radial-gradient(#065c95, transparent); 
+    border:1px solid rgb(142, 157, 175);
+    box-shadow: 1px 3px 7px 1px #070707;}
    .bg-theme-btn{
     color: white;
     background: radial-gradient(#033658, transparent);

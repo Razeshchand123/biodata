@@ -38,14 +38,17 @@
       <th>Passed year</th>
   </thead>
   <tbody>
-      @foreach($edata as $evalue)
+      @forelse($edata as $evalue)
       <tr>
       <td class="text-capitalize">{{$evalue->instute}}</td>
       <td class="text-capitalize">{{$evalue->level}}</td>
       <td>{{$evalue->retreive}}</td>
       <td>{{$evalue->Passed_year}}</td>
     </tr>
-    @endforeach
+   
+    @empty
+    <td colspan="4"><h4 class="text-danger text-center">No Education filled yet |</h4></td>
+    @endforelse
   </tbody>
 
 </table>
@@ -65,14 +68,17 @@
         
     </thead>
     <tbody>
-      @foreach ($workdata as  $wvalue) 
+      @forelse ($workdata as  $wvalue) 
         <tr>
         <td class="text-capitalize">{{$wvalue->oraganization}}</td>
         <td class="text-capitalize">{{$wvalue->joining}}</td>
         <td class="text-capitalize">{{$wvalue->duration}}</td>
         <td class="text-capitalize">{{$wvalue->position}}</td>
       </tr>
-      @endforeach
+      @empty
+    <td colspan="4"><h4 class="text-danger text-center">No Work Experience Added |</h4></td>
+    @endforelse
+    
     </tbody>
   
   </table>
@@ -99,7 +105,7 @@
     </a></td>
     </tr>
     @empty
-    <td colspan="2"><p class="text-danger text-capitalize h4">no live projects added yet !</p></td>
+    <td colspan="2"><p class="text-danger text-capitalize h4 text-center">no live projects added yet !</p></td>
     @endforelse
   
     </tbody>
