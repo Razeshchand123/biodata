@@ -51,8 +51,8 @@
          <input type="text" wire:model="number"  class="form-control" placeholder=" Set your contect number">
          @error('number') <small class="text-white">{{$message}}</small> @enderror
          <br>
-         <input type="submit" class="btn btn-block bg-theme-btn"  class="form-control">
-       </form>
+         <input type="submit" class="btn btn-block bg-theme-btn"  class="form-control" >
+           </form>
 
     </div>
     {{-- socail control --}}

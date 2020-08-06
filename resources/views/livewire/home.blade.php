@@ -32,7 +32,7 @@
             {{substr($firstpostvalue->pdescription,130,100)}}
             <br>
             <i class="far fa-clock text-primary pl-1 "></i>
-              <span class="text-dark"> {{$firstpostvalue->created_at->diffForHumans()}}</span>
+              <small class="text-dark"> {{$firstpostvalue->created_at->diffForHumans()}}</small>
            <button type="button" class="btn btn-link " data-toggle="modal" data-target="#exampleModaltotalpost{{$firstpostvalue->id}}">
                  Read more
                 </button>
@@ -60,7 +60,7 @@
           <!-- {{$firstpostvalue->pdescription}} -->
          <br>
          <i class="far fa-clock text-primary pl-1 "></i>
-         <span class="text-dark"> {{$firstpostvalue->created_at->diffForHumans()}}</span>
+         <small class="text-dark"> {{$firstpostvalue->created_at->diffForHumans()}}</small>
       </p>
 
 
@@ -126,7 +126,7 @@
       {{substr($postvalue->pdescription,0,500)}}<br>
       @endif
 
-      <i class="far fa-clock text-primary pl-1 "></i> <span class="text-info mt-0"> {{$postvalue->created_at->diffForHumans()}}</span>
+      <i class="far fa-clock text-primary pl-1 "></i> <small class="text-info mt-0"> {{$postvalue->created_at->diffForHumans()}}</small>
    </p>
 
     

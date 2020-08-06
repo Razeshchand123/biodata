@@ -15,6 +15,9 @@ class Test extends Component
     use WithFileUploads;
     public $photo;
     public $filename;
+    public $number=0;
+    public $productimg;
+    public $productimg2;
 
     public $test="ra";
 public function mount(){
@@ -39,6 +42,22 @@ public function educationdelete($id){
     $this->test="deletebymodel".$id;
    
 }
+
+
+public function poll(){
+$this->number++;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 public function loadinfun(){
     $this->test="loadinfun";
