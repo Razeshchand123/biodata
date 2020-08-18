@@ -16,6 +16,7 @@
 
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
  <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
  <!-- <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet"> -->
  @livewireStyles
@@ -102,7 +103,14 @@
 </div>
 
 
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        delay:0,
+        duration:600,
+        easing: 'ease-in-out',
+    });
+  </script>
 
 
 </body>

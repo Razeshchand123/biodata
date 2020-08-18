@@ -19,6 +19,9 @@ class Test extends Component
     public $productimg;
     public $productimg2;
 
+
+    public $apivariable="ram";
+
     public $test="ra";
 public function mount(){
 

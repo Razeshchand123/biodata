@@ -96,13 +96,13 @@
 
 
 <div class="container mt-5">
-    <div class="row">
-        <div class="col-sm-8 m-auto">
+    <div class="row" >
+        <div class="col-sm-8 m-auto" >
 <h1 id="blog " class="text-center text-primary text-capitalize mt-5">blogs</h1>
 <hr class="w-25 mx-auto bg-primary">
 
 @foreach($postdata as $postvalue)
- <div class="row  mt-3 p-3 p-md-2 bg-light d-flex flex-column">
+ <div class="row  mt-3 p-3 p-md-2 bg-light d-flex flex-column" data-aos='flip-down'>
      <h4 style="padding-left: 2.5%;" class="text-capitalize">{{$postvalue->ptitle}}</h4>
     <p class="description pl-3" > 
 
