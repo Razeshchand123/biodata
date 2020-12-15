@@ -1,9 +1,154 @@
 <div>
 
      <div class="container-fluid " style="margin-top:-6%;">
+     <!-- mobileview code start -->
+     <div class="row">
+        <div class="col-sm-10 m-auto mobileview">
+              <!-- education  start  -->
+        <div class="wrapper_mobileblock mt-5" data-aos='flip-down'>
+        <h3>EDUCATION</h3>
+ 
+ <table class="table table-responsive table-hover table-striped">
+   <thead>
+     <th>Institute</th>
+       <th>Level</th>
+       <th>Retreive</th>
+       <th>Passed year</th>
+   </thead>
+   <tbody>
+       @forelse($edata as $evalue)
+       <tr>
+       <td class="text-capitalize">{{$evalue->instute}}</td>
+       <td class="text-capitalize">{{$evalue->level}}</td>
+       <td>{{$evalue->retreive}}</td>
+       <td>{{$evalue->Passed_year}}</td>
+     </tr>
+    
+     @empty
+     <td colspan="4"><h4 class="text-danger text-center">No Education filled yet |</h4></td>
+     @endforelse
+   </tbody>
+ 
+ </table>
+ 
+ 
+        
+</div>
+<!-- educatiion end  -->
+
+        <!-- .........running project.....................  -->
+        <div class="wrapper_mobileblock mt-5" data-aos='flip-down'>
+  <h3>Running project</h3>
+  <p>I gald to say i contribute for these some live project as developer </p>
+
+  
+  <table class="table table-responsive table-hover table-striped ">
+  <thead>
+  <th>URL</th>
+  <th>View Now</th>
+  </thead>
+    <tbody>
+    @forelse($urldata as $url)
+    <tr>
+    <td><p class=" text-dark">{{$url->url}}</p></td>
+    <td><a href="{{$url->url}}" target="_blank">
+    <i class="fas fa-eye fa-2x this"></i>
+          
+    </a></td>
+    </tr>
+    @empty
+    <td colspan="2"><p class="text-danger text-capitalize h4 text-center">no live projects added yet !</p></td>
+    @endforelse
+  
+    </tbody>
+    </table>
+</div>
+        <!-- ...............running project end...............  -->
+
+        <!-- work experience start  -->
+        <div class="wrapper_mobileblock mt-5" data-aos='flip-down'>
+        <h3>Work Experience</h3>
+
+<table class="table table-responsive table-hover table-striped ">
+  <thead>
+      <th >Oraganization</th>
+      <th>joining year</th>
+      <th>engaged year</th>
+      <th >Position</th>
+      
+  </thead>
+  <tbody>
+    @forelse ($workdata as  $wvalue) 
+      <tr>
+      <td class="text-capitalize">{{$wvalue->oraganization}}</td>
+      <td class="text-capitalize">{{$wvalue->joining}}</td>
+      <td class="text-capitalize">{{$wvalue->duration}}</td>
+      <td class="text-capitalize">{{$wvalue->position}}</td>
+    </tr>
+    @empty
+  <td colspan="4"><h4 class="text-danger text-center">No Work Experience Added |</h4></td>
+  @endforelse
+  
+  </tbody>
+
+</table>
+</div>
+<!-- work experienceend  -->
+<!-- contact start  -->
+<div class="wrapper_mobileblock mt-5" data-aos='flip-down'>
+<h3 class="  ">Contact</h3>
+
+<table class="table table-responsive table-hover  table-striped">
+    <tbody>
+  
+      <tr>
+        <td>Name: </td>
+        <td class="text-capitalize">{{ $name}}</td>
+      </tr>
+        <tr>
+        <td>Email: </td>
+        <td class="text-capitalize">{{ $email}}</td>
+      </tr>
+<tr>
+    <td>Address: </td>
+<td class="text-capitalize">{{$address}}</td>
+</tr>
+<tr>
+    <td>Contact</td>
+<td class="text-capitalize">{{$number}}</td>
+</tr>
+
+<tr>
+<td class="pt-2">Social links</td>
+    <td>
+    <div >
+    
+        <a href=" {{$facebooklink}}" target="_blank"><i class="fab fa-facebook fa-2x this"></i></a>
+         <a href="{{$instalink}}" target="_blank"><i class="fab fa-instagram-square fa-2x this"></i></a>
+         <a href="{{$glink}}" target="_blank"><i class="fab fa-google-plus fa-2x this"></i></a>
+         <a href="{{$youtubelink}}" target="_blank"> <i class="fab fa-youtube fa-2x this"></i></a>
+         <a href="{{$github}}" target="_blank"> <i class="fab fa-github fa-2x this"></i></a>
+        
+      </div>
+    </td>
+</tr>
+
+    </tbody>
+  
+  </table>
+</div>
+<!-- contact end here -->
+
+    
+
+</div>
+</div>
+
+     <!-- mobileview code end -->
+
     <div class="row">
-        <div class="col-sm-10 m-auto " style="">
-     <!-- {{-- copiedcode        --}} -->
+        <div class="col-sm-10 m-auto hideshow">
+     <!-- copiedcode        -->
  
 
   
@@ -30,7 +175,7 @@
 <div id="London" class="tabcontent">
   <h3>EDUCATION</h3>
  
-<table class="table table-hover table-striped">
+<table class="table table-responsive table-hover table-striped">
   <thead>
     <th>Institute</th>
       <th>Level</th>
@@ -59,7 +204,7 @@
 <div id="Paris" class="tabcontent">
   <h3>Work Experience</h3>
 
-  <table class="table table-hover table-striped ">
+  <table class="table table-responsive table-hover table-striped ">
     <thead>
         <th >Oraganization</th>
         <th>joining year</th>
@@ -90,7 +235,7 @@
   <p>I gald to say i contribute for these some live project as developer </p>
 
   
-  <table class="table table-hover table-striped ">
+  <table class="table table-responsive table-hover table-striped ">
   <thead>
   <th>URL</th>
   <th>View Now</th>
@@ -117,7 +262,7 @@
 <div id="contact" class="tabcontent" >
     <h3 class="  ">Contact</h3>
 
-    <table class="table table-hover  table-striped">
+    <table class="table table-responsive table-hover  table-striped">
         <tbody>
       
           <tr>
@@ -146,7 +291,7 @@
              <a href="{{$instalink}}" target="_blank"><i class="fab fa-instagram-square fa-2x this"></i></a>
              <a href="{{$glink}}" target="_blank"><i class="fab fa-google-plus fa-2x this"></i></a>
              <a href="{{$youtubelink}}" target="_blank"> <i class="fab fa-youtube fa-2x this"></i></a>
-             <a href="{{$githublink}}" target="_blank"> <i class="fab fa-github fa-2x this"></i></a>
+             <a href="{{$github}}" target="_blank"> <i class="fab fa-github fa-2x this"></i></a>
             
           </div>
         </td>

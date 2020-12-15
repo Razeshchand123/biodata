@@ -7,6 +7,8 @@ use Livewire\WithFileUploads;
 use App\myblog;
 use App\social;
 use App\education;
+use PDF;
+use App;
 use App\userexperience;
 
 use Illuminate\Support\Facades\storage;
@@ -18,53 +20,23 @@ class Test extends Component
     public $number=0;
     public $productimg;
     public $productimg2;
+   
 
 
     public $apivariable="ram";
 
     public $test="ra";
-public function mount(){
 
-    if($this->test !="ram"){
-        $this->test="woow";
-    }
-
-}
-    public function save()
-    {
-        $this->validate([
-            'photo' => 'image|max:1024', // 1MB Max
-        ]);
-
-        $this->filename=$this->photo->store('public/images');
-
-
-
-    }
-public function educationdelete($id){
-    $this->test="deletebymodel".$id;
-   
+    public function gen(){
+        $this->test="gen";
+        
+        $pdf = App::make('dompdf.wrapper');
+      $pdf->loadHTML('<h1>Test</h1>');
+       return $pdf->stream();
+       
+     
 }
 
-
-public function poll(){
-$this->number++;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-public function loadinfun(){
-    $this->test="loadinfun";
-}
     public function render()
     {
         $estd=new education;
@@ -78,10 +50,12 @@ public function loadinfun(){
 // 111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 // first choti run garauda admin.php ma find(1) vanne line line comment garne
 
-$std=new social;
+// $std=new social;
+// admin ko 125
 //  $std= $std->find(1);
 
 $std=new myblog;
+// admin ko line no 103
 // $std= $std->find(1);
 
 // 11111111111111111111111111111111111111111111111111111111111111111111

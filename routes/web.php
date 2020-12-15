@@ -24,9 +24,10 @@ Route::group(["middleware"=>"security"],function(){
 
 });
 
+
  Route::livewire("/test","test");
  
  
 
  
- 
+ Route::get('/pdf','pdfcontroller@pdfgen');

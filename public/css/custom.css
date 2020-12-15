@@ -147,6 +147,11 @@ body{
    height: 200%;
     
   } */
+.wrapper_mobileblock{
+    background: radial-gradient(#61aada, transparent);
+    padding: 2%;
+    border:1px solid black;
+}
 
 .the{color:#044d7f;}
    #labeforsetprofile{
@@ -154,14 +159,24 @@ body{
     background: radial-gradient(#044d7f, transparent);
    padding: 1%;
   }
-  
+  .mobileview{display: none;}
 /* ========================== */
-@media screen and (max-width:452px){
-table th,table td{font-size:60%;}
-   
-   }
+
    /* ========================== */
-@media screen and (max-width:314px){
-    table th,table td{font-size:40%;}
-       
+
+          /* ========================== */
+@media screen and (max-width:991px){
+    .cover{
+        border-left: 2px solid red;
+        margin-top: 7%;
+    }
+    .herotext{
+    font-size: 68%;
+    }
        }
+
+       @media screen and (max-width:880px){
+       .hideshow{display: none;}
+       .mobileview{display: block;}
+
+       }   

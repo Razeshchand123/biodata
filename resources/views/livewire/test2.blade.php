@@ -1,26 +1,30 @@
 <div>
+   
+
 <div class="container" style="margin-top:-6%;">
     <div class="row">
-       <div class="col-sm-10 m-auto  wrapper d-flex justify-content-center">
+       <div class="col-sm-10 m-auto  wrapper">
+      
 
-<!-- ................fiist imag and intro paragrapg start-->
+ <div class="row">
+    <div class="cover col-lg-8 ">
+     <img src="{{ Storage::url( $pic) }}"  class=" img-fluid rounded mainimg " style=" filter:sepia(50%);"/>
 
-<div class="row w-100">
-<div class=" cover col-lg-8">
-<img src="{{ Storage::url( $pic) }}"  class=" img-fluid rounded mainimg " style=" filter:sepia(50%);"/>
-<div class="parda text-content  animate__animated animate__jello animate__delay-3s animate__slower animate__infinite ">
+   <div class="parda text-content  animate__animated animate__jello animate__delay-3s animate__slower animate__infinite ">
    
-   <i class="text-white text-capitalize herotext">you are the hero for your own world</i>
-</div>
-</div>
+         <i class="text-white text-capitalize">you are the hero for your own world</i>
+   </div> 
+   
+    </div>
 
+  <div class="col-lg-4">
+   
+       @foreach($firstpostdata as $firstpostvalue)
 
+          <div class="bg-light mt-5">
 
-<div class="col-lg-4">
-@foreach($firstpostdata as $firstpostvalue)
-<div class="bg-light mt-5">
-<h5 class="mb-0 p-2 text-capitalize">{{$firstpostvalue->ptitle}} </h5>
-<p  class=" description" style="text-align:justify;padding:4%;">
+            <h5 class="mb-0 p-2 text-capitalize">{{$firstpostvalue->ptitle}} </h5>
+           <p  class=" description" style="text-align:justify;padding:4%;">
           
            @if(strlen($firstpostvalue->pdescription)>340)
             <!-- {{Str::limit($firstpostvalue->pdescription,330, $end='') }}  -->
@@ -33,7 +37,7 @@
                  Read more
                 </button>
             
-         
+            {{-- model code --}}
             <!-- Button trigger modal -->
 <!-- Modal -->
     <div class="modal fade" id="exampleModaltotalpost{{$firstpostvalue->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -74,37 +78,30 @@
                    
          @endif  
                </p>       
-</div>
-<hr>
-@endforeach
+ </div>
+ <hr>
+  @endforeach
+  </div>
 
-</div>
-
-
-
-
-
-
-</div>
-<!-- ................fiist imag and intro paragrapg start-->
-
-
-
-
-</div>
-</div>
+ 
+     </div>
+       </div>
+    </div>
+    
 </div>
 
 
-<!-- second part start here  -->
+
+
+
 <div class="container mt-5">
     <div class="row" >
         <div class="col-sm-8 m-auto" >
-        <h1 id="blog " class="text-center text-primary text-capitalize mt-5">blogs</h1>
-        <hr class="w-25 mx-auto bg-primary">
-        <!-- ...............................................................................................  -->
-        @foreach($postdata as $postvalue)
- <div class="row  mt-3 p-3 p-md-2 bg-light d-flex flex-column w-100" data-aos='flip-down'>
+<h1 id="blog " class="text-center text-primary text-capitalize mt-5">blogs</h1>
+<hr class="w-25 mx-auto bg-primary">
+
+@foreach($postdata as $postvalue)
+ <div class="row  mt-3 p-3 p-md-2 bg-light d-flex flex-column" data-aos='flip-down'>
      <h4 style="padding-left: 2.5%;" class="text-capitalize">{{$postvalue->ptitle}}</h4>
     <p class="description pl-3" > 
 
@@ -136,10 +133,28 @@
 <hr>
 @endforeach
 
-        <!-- ...............................................................................................  -->
+
+
 
 </div>
 </div>
 </div>
-<!-- second part start end  -->
+
+
+
+<div class="heart">
+   
+   <button wire:click="heart" class="btn btn-sm">  <i class="fas fa-heart fa-3x animate__animated animate__heartBeat animate__delay-2s animate__slower animate__infinite	infinite"></i></button>
+   {{$heart}}
 </div>
+
+
+<div class="d-flex justify-content-center">
+  <small class="mt-2">{{$postdata->links()}}</small>
+</div>
+
+
+
+
+</div>
+<script src="/path/to/noframework.waypoints.min.js"></script>

@@ -122,7 +122,7 @@ public function updatedpic(){
 
  public function sociallinkcontrol(){
      $std=new social;
-     $std= $std->find(1);
+    //  $std= $std->find(1);
      $std->furl=$this->facebooklink;
      $std->iurl=$this->instalink;
      $std->uurl=$this->youtubelink;
@@ -203,9 +203,6 @@ public function postelete($id){
 
 
 public function addblog(){
-
-
-    
     $std=new post;
     $std->pdescription=$this->blogtitle;
     $std->pdescription=$this->blogdescription;

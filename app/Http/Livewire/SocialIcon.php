@@ -11,6 +11,7 @@ public $facebooklink;
 public $youtubelink;
 public $instalink;
 public $glink;
+public $githublink;
     
     public function render()
     {
